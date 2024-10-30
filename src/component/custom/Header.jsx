@@ -93,7 +93,8 @@ function Header() {
           <Button onClick={()=>setopenDialog(true)}>Sign in</Button>
           
         )}
-          <Dialog open={openDialog}>
+          <Dialog open={openDialog} onClick={()=>setopenDialog(!openDialog)}>
+          <DialogTrigger></DialogTrigger>
           <DialogContent>
             <DialogHeader>
               <DialogTitle className="logo text-3xl text-slate-900 font-extrabold">DtripP</DialogTitle>
