@@ -24,7 +24,9 @@ import { useNavigate } from 'react-router-dom';
 
 function CreatTrip() {
   const navigate=useNavigate();
+  // const apiKey = import.meta.env.VITE_GOOGLE_PLACE_API_KEY;
   const apiKey = import.meta.env.VITE_GOOGLE_PLACE_API_KEY;
+
   const [place, setplace] = useState();
   const [formData, setformData] = useState({});
   const [openDialog, setopenDialog] = useState(false);
@@ -36,6 +38,7 @@ function CreatTrip() {
       [name]: value
     });
   };
+  console.log('apikey',apiKey)
 
   const login = useGoogleLogin({
     onSuccess: (codeResp) => {
